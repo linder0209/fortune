@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <style>
+    html {
+      font-size: 14px;
+    }
+
+    body {
+      margin: 20px auto;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 90%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-sm-center">贷款、收益工具</h1>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-6">
+        <div>
+          <h2 class="text-sm-center">根据月供计算年利率</h2>
+          <p>等额本息计算方法</p>
+          <p>每月还款数额计算公式如下：</p>
+          <p>[贷款本金×月利率×（1+月利率）^还款月数]÷[（1+月利率）^还款月数－1]</p>
+          <p>以万元贷款为例，不同年限的贷款每月还款金额为：</p>
+          <p>贷款2年，年利率 5.40%，月利率 4.500 ‰，每月还款 440.51元</p>
+        </div>
+        <div class="mt-1">
+          <p><label for="amount">贷款金额</label> <input type="text" id="amount"/> 万元</p>
+          <p><label for="monthRefund">每月还款</label> <input type="text" id="monthRefund"/> 元</p>
+          <p><label for="month">贷款周期</label> <input type="text" id="month"/> 月</p>
+          <p>
+            <button type="button" class="btn btn-primary" id="calculation">计算</button>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h2 class="text-sm-center">计算结果</h2>
+        <div id="result">
+          <p>贷款年利率： <span id="loan"></span> %</p>
+          <p>贷款总利息： <span id="interest"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="jquery.js"></script>
+  <script src="tools.js"></script>
+</body>
+</html>
